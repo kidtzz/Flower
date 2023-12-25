@@ -32,8 +32,13 @@
   font-weight: bold;
 }
 
+.text-content-small {
+  font-size: 8px;
+
+}
+
 .content_for .text-content p {
-  font-size: 14px !important;
+  font-size: 8px !important;
 }
 
 .content_for .text-content .animate-charcter {
@@ -50,7 +55,7 @@
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
   display: inline-block;
-  font-size: 18px;
+  font-size: 12px;
   -webkit-animation: textclip 2s linear infinite;
 }
 
