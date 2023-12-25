@@ -26,10 +26,18 @@
   <div class="night">
 
     <div class="content_for">
-      <audio controls autoplay hidden>
+      <!-- <audio controls autoplay hidden>
         <source src="https://kidtzz.github.io/Flower/Fallen%20-%20Gert%20Taberner.mp3"
           type="audio/mpeg">
-      </audio>
+      </audio> -->
+
+      <!-- <audio id="player" preload="auto" autoplay loop>
+        <source src="https://kidtzz.github.io/Flower/Fallen%20-%20Gert%20Taberner.mp3" type="audio/mp3">
+      </audio> -->
+
+      <iframe src="https://kidtzz.github.io/Flower/Fallen%20-%20Gert%20Taberner.mp3" allow="autoplay" id="audio"
+        style="display:none"></iframe>
+
       <div class="img-content">
         <img src="./img/wshi.png" alt="" height="60" width="60" class=" mx-auto d-block">
       </div>
@@ -366,6 +374,13 @@
       </div>
     </div>
   </div>
+  <script>
+    document.addEventListener('click', musicPlay);
+    function musicPlay() {
+      document.getElementById('ID').play();
+      document.removeEventListener('click', musicPlay);
+    }
+  </script>
 </body>
 
 </html>
