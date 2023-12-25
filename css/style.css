@@ -32,6 +32,10 @@
   font-weight: bold;
 }
 
+.content_for .text-content p {
+  font-size: 14px;
+}
+
 .content_for .text-content .animate-charcter {
   background: #43C6AC;
   background: -webkit-linear-gradient(to right, #191654, #43C6AC);
