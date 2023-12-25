@@ -37,6 +37,15 @@
 
 }
 
+#content_hide span {
+  font-size: 50px;
+  padding-top: 250px;
+}
+
+#content_hide span p {
+  font-size: 18px;
+}
+
 .content_for .text-content p {
   font-size: 8px !important;
 }

@@ -19,64 +19,65 @@
 
 </head>
 
-
 <body class="not-loaded">
-
-
   <div class="night">
-
     <div class="content_for">
-      <!-- <audio controls autoplay hidden>
-        <source src="https://kidtzz.github.io/Flower/Fallen%20-%20Gert%20Taberner.mp3" type="audio/mpeg">
-      </audio> -->
-
-      <!-- <audio id="player" preload="auto" autoplay loop hidden>
+      <audio id="audioID" hidden>
         <source src="https://kidtzz.github.io/Flower/Fallen%20-%20Gert%20Taberner.mp3" type="audio/mp3">
-      </audio> -->
+      </audio>
 
-      <iframe hidden src="https://kidtzz.github.io/Flower/Fallen%20-%20Gert%20Taberner.mp3" allow="autoplay" id="audio"
-        style="display:none"></iframe>
+      <div id="content_hide">
+        <div class="col d-flex justify-content-center">
+          <span class="" onclick="showhide()">
+            🎁
+            <p>v--v--v</p>
+          </span>
+        </div>
 
-      <div class="img-content">
-        <img src="./img/wshi.png" alt="" height="60" width="60" class=" mx-auto d-block">
       </div>
-      <!-- <div class="row align-items-start">
-        <div class="col d-flex justify-content-end">
-          <div class="img-content">
-            <img src="./img/wshi.png" alt="" height="60" width="60" class=" mx-auto d-block">
+
+      <div id="content_show">
+        <div class="img-content">
+          <img src="./img/wshi.png" alt="" height="60" width="60" class=" mx-auto d-block">
+        </div>
+        <!-- <div class="row align-items-start">
+          <div class="col d-flex justify-content-end">
+            <div class="img-content">
+              <img src="./img/wshi.png" alt="" height="60" width="60" class=" mx-auto d-block">
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center">
+            <span class="heart"></span>
+          </div>
+          <div class="col d-flex justify-content-start">
+            <div class="img-content">
+              <img src="./img/img-p.jpeg" alt="" height="60" width="60" class=" mx-auto d-block">
+            </div>
+          </div>
+        </div> -->
+
+        <div class="text-content">
+          <div class="col-md-12 py-3 text-center">
+            <h3 class="animate-charcter fw-bold"> Shieru x Rasty ?</h3>
           </div>
         </div>
-        <div class="col d-flex justify-content-center">
-          <span class="heart"></span>
-        </div>
-        <div class="col d-flex justify-content-start">
-          <div class="img-content">
-            <img src="./img/img-p.jpeg" alt="" height="60" width="60" class=" mx-auto d-block">
+        <div class="img-content">
+          <div class="col d-flex justify-content-center">
+            <span class="heart"></span>
           </div>
         </div>
-      </div> -->
-
-      <div class="text-content">
-        <div class="col-md-12 py-3 text-center">
-          <h3 class="animate-charcter fw-bold"> Shieru x Rasty ?</h3>
+        <div class="text-content">
+          <div class="col-md-12 p-5 text-center">
+            <p>"Thank you for making me realize I'm not worthless. Thank you for your unconditional love and support."
+            </p>
+            <span class="text-content-small">"from me _"</span>
+          </div>
         </div>
-      </div>
-      <div class="img-content">
-        <div class="col d-flex justify-content-center">
-          <span class="heart"></span>
-        </div>
-      </div>
-      <div class="text-content">
-        <div class="col-md-12 p-5 text-center">
-          <p>"Thank you for making me realize I'm not worthless. Thank you for your unconditional love and support."</p>
-          <span class="text-content-small">"from me _"</span>
-        </div>
-
       </div>
     </div>
   </div>
 
-  <div class="flowers">
+  <div class="flowers " id="content_show">
 
     <div class="flower flower--1">
       <div class="flower__leafs flower__leafs--1">
@@ -374,10 +375,22 @@
     </div>
   </div>
   <script>
-    document.addEventListener('click', musicPlay);
-    function musicPlay() {
-      document.getElementById('ID').play();
-      document.removeEventListener('click', musicPlay);
+    var divShow = document.getElementById("content_show");
+    divShow.style.display = "none";
+    function showhide() {
+      var myaudio = document.getElementById("audioID");
+      var divHide = document.getElementById("content_hide");
+      var divShow = document.getElementById("content_show");
+      divShow.style.display = "none";
+      if (divHide.style.display !== "block") {
+        divHide.style.display = "block";
+        myaudio.play();
+      }
+      else {
+        divHide.style.display = "none";
+        divShow.style.display = "block";
+        myaudio.play();
+      }
     }
   </script>
 </body>
